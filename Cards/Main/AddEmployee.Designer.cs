@@ -73,7 +73,7 @@
             // btnexist
             // 
             this.btnexist.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnexist.Location = new System.Drawing.Point(562, 319);
+            this.btnexist.Location = new System.Drawing.Point(562, 257);
             this.btnexist.Name = "btnexist";
             this.btnexist.Size = new System.Drawing.Size(75, 28);
             this.btnexist.TabIndex = 17;
@@ -94,7 +94,7 @@
             // btnadd
             // 
             this.btnadd.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnadd.Location = new System.Drawing.Point(461, 319);
+            this.btnadd.Location = new System.Drawing.Point(461, 257);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(75, 28);
             this.btnadd.TabIndex = 18;
@@ -146,7 +146,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(146, 220);
+            this.label6.Location = new System.Drawing.Point(161, 184);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(41, 19);
             this.label6.TabIndex = 13;
@@ -156,7 +156,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(146, 261);
+            this.label7.Location = new System.Drawing.Point(161, 225);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(44, 19);
             this.label7.TabIndex = 13;
@@ -166,7 +166,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(141, 293);
+            this.label8.Location = new System.Drawing.Point(156, 257);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(50, 19);
             this.label8.TabIndex = 13;
@@ -175,7 +175,7 @@
             // txtfuel
             // 
             this.txtfuel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtfuel.Location = new System.Drawing.Point(193, 217);
+            this.txtfuel.Location = new System.Drawing.Point(208, 181);
             this.txtfuel.Name = "txtfuel";
             this.txtfuel.Size = new System.Drawing.Size(91, 26);
             this.txtfuel.TabIndex = 19;
@@ -183,7 +183,7 @@
             // txtmobile
             // 
             this.txtmobile.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtmobile.Location = new System.Drawing.Point(193, 257);
+            this.txtmobile.Location = new System.Drawing.Point(208, 221);
             this.txtmobile.Name = "txtmobile";
             this.txtmobile.Size = new System.Drawing.Size(91, 26);
             this.txtmobile.TabIndex = 19;
@@ -191,7 +191,7 @@
             // txtnet
             // 
             this.txtnet.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnet.Location = new System.Drawing.Point(193, 289);
+            this.txtnet.Location = new System.Drawing.Point(208, 253);
             this.txtnet.Name = "txtnet";
             this.txtnet.Size = new System.Drawing.Size(91, 26);
             this.txtnet.TabIndex = 19;
@@ -200,7 +200,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(671, 359);
+            this.ClientSize = new System.Drawing.Size(671, 289);
             this.Controls.Add(this.txtnet);
             this.Controls.Add(this.txtmobile);
             this.Controls.Add(this.txtfuel);
