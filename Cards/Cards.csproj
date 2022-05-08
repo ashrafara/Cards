@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C9982D44-E32F-453A-BA6E-2AFFB98228E4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Cards</RootNamespace>
+    <AssemblyName>Cards</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DL\Disptach.cs" />
+    <Compile Include="Edit\EditDispatchOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\EditDispatchOrder.Designer.cs">
+      <DependentUpon>EditDispatchOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\EditEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\EditEmployee.Designer.cs">
+      <DependentUpon>EditEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\EditItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\EditItem.Designer.cs">
+      <DependentUpon>EditItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\EditItemType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\EditItemType.Designer.cs">
+      <DependentUpon>EditItemType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\EditReceiveOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\EditReceiveOrder.Designer.cs">
+      <DependentUpon>EditReceiveOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\EditSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\EditSupplier.Designer.cs">
+      <DependentUpon>EditSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DL\Employee.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DL\Item.cs" />
+    <Compile Include="DL\ItemType.cs" />
+    <Compile Include="Main\AddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\AddEmployee.Designer.cs">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\AddItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\AddItem.Designer.cs">
+      <DependentUpon>AddItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\AddItemType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\AddItemType.Designer.cs">
+      <DependentUpon>AddItemType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\AddSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\AddSupplier.Designer.cs">
+      <DependentUpon>AddSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\DispatchOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\DispatchOrder.Designer.cs">
+      <DependentUpon>DispatchOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\AddReceiveOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\AddReceiveOrder.Designer.cs">
+      <DependentUpon>AddReceiveOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DL\ReceiveOrder.cs" />
+    <Compile Include="report\alone_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report\alone_view.Designer.cs">
+      <DependentUpon>alone_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="report\disp_employeyearly_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report\disp_employeyearly_view.Designer.cs">
+      <DependentUpon>disp_employeyearly_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="report\disp_item_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>disp_item_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\disp_item_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report\disp_item_view.Designer.cs">
+      <DependentUpon>disp_item_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="report\disp_year_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>disp_year_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\disp_year_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report\disp_year_view.Designer.cs">
+      <DependentUpon>disp_year_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="report\employeeannual_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>employeeannual_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\receiveitem_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>receiveitem_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\receiveitem_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report\receiveitem_view.Designer.cs">
+      <DependentUpon>receiveitem_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="report\residual.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>residual.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\residue_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report\residue_view.Designer.cs">
+      <DependentUpon>residue_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowAll\dispatch_EmployeeAlone_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dispatch_EmployeeAlone_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\receive_year_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>receive_year_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\receive_year_report_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report\receive_year_report_view.Designer.cs">
+      <DependentUpon>receive_year_report_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowAll\DispatchShowAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowAll\DispatchShowAll.Designer.cs">
+      <DependentUpon>DispatchShowAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowAll\EmployeeShowAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowAll\EmployeeShowAll.Designer.cs">
+      <DependentUpon>EmployeeShowAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowAll\ReceiveShowAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowAll\ReceiveShowAll.Designer.cs">
+      <DependentUpon>ReceiveShowAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowAll\receive_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>receive_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ShowAll\receive_report_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowAll\receive_report_view.Designer.cs">
+      <DependentUpon>receive_report_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DL\Supplier.cs" />
+    <Compile Include="sysdiagram.cs" />
+    <EmbeddedResource Include="Edit\EditDispatchOrder.resx">
+      <DependentUpon>EditDispatchOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\EditEmployee.resx">
+      <DependentUpon>EditEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\EditItem.resx">
+      <DependentUpon>EditItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\EditItemType.resx">
+      <DependentUpon>EditItemType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\EditReceiveOrder.resx">
+      <DependentUpon>EditReceiveOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\EditSupplier.resx">
+      <DependentUpon>EditSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\AddEmployee.resx">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\AddItem.resx">
+      <DependentUpon>AddItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\AddItemType.resx">
+      <DependentUpon>AddItemType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\AddSupplier.resx">
+      <DependentUpon>AddSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\DispatchOrder.resx">
+      <DependentUpon>DispatchOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\AddReceiveOrder.resx">
+      <DependentUpon>AddReceiveOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="report\alone_view.resx">
+      <DependentUpon>alone_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\disp_employeyearly_view.resx">
+      <DependentUpon>disp_employeyearly_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\disp_item_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>disp_item_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\disp_item_view.resx">
+      <DependentUpon>disp_item_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\disp_year_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>disp_year_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\disp_year_view.resx">
+      <DependentUpon>disp_year_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\employeeannual_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>employeeannual_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\receiveitem_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>receiveitem_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\receiveitem_view.resx">
+      <DependentUpon>receiveitem_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\residual.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>residual.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\residue_view.resx">
+      <DependentUpon>residue_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowAll\dispatch_EmployeeAlone_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dispatch_EmployeeAlone_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\receive_year_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>receive_year_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\receive_year_report_view.resx">
+      <DependentUpon>receive_year_report_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowAll\DispatchShowAll.resx">
+      <DependentUpon>DispatchShowAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowAll\EmployeeShowAll.resx">
+      <DependentUpon>EmployeeShowAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowAll\ReceiveShowAll.resx">
+      <DependentUpon>ReceiveShowAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowAll\receive_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>receive_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowAll\receive_report_view.resx">
+      <DependentUpon>receive_report_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
